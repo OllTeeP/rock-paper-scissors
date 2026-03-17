@@ -22,8 +22,16 @@ function getHumanChoice() {
     return answer
 }
 
+function playGame() {
+
 let humanScore = 0
 let computerScore = 0
+
+// Source - https://stackoverflow.com/a/17624356
+// Posted by OrangeDog, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-03-17, License - CC BY-SA 4.0
+
+for (var i = 1; i < 6; i++) playRound(i);
 
 function playRound(humanChoice ,computerChoice) {
     humanChoice = getHumanChoice().toLowerCase()
@@ -57,4 +65,13 @@ function playRound(humanChoice ,computerChoice) {
     }
 }
 
-playRound()
+if (humanScore > computerScore) {
+    alert("You Won")
+}
+if (computerScore > humanScore) {
+    alert("You lost")
+}
+
+}
+
+playGame()
