@@ -24,3 +24,37 @@ function getHumanChoice() {
 
 let humanScore = 0
 let computerScore = 0
+
+function playRound(humanChoice ,computerChoice) {
+    humanChoice = getHumanChoice().toLowerCase()
+    computerChoice = getComputerChoice()
+    if (humanChoice == "rock" && computerChoice == "Scissors") {
+        alert("You won Rock beat Scissors")
+        humanScore++
+    }
+    if (humanChoice == "scissors" && computerChoice == "Paper") {
+        alert("You won Scissors beat Paper")
+        humanScore++
+    }
+    if (humanChoice == "paper" && computerChoice == "Rock") {
+        alert("You won Paper beat Rock")
+        humanScore++
+    }
+    
+
+
+    if (computerChoice == "Rock" && humanChoice == "scissors") {
+        alert("You lost Rock beat Scissors")
+        computerScore++
+    }
+    if (computerChoice == "Scissors" && humanChoice == "paper") {
+        alert("You lost Scissors beat Paper")
+        computerScore++
+    }
+    if (computerChoice == "Paper" && humanChoice == "rock") {
+        alert("You lost Paper beat Rock")
+        computerScore++
+    }
+}
+
+playRound()
